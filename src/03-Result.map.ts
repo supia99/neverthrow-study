@@ -10,8 +10,8 @@ const getLines = (str: string) => {
 const linesResult = getLines("1\n2\n3\n4\n");
 console.log(linesResult);
 // this Result now has a Array<number> inside it
-const newResult = linesResult.map((arr: Array<string>) => arr.map(parseInt));
-
-console.log(
-  newResult.isOk() // true
+const newResult = linesResult.map((arr: Array<string>) =>
+  arr.map((n) => parseInt(n))
 );
+
+console.log(newResult);
